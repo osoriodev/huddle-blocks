@@ -1,0 +1,27 @@
+{
+  "name": "huddle-blocks",
+  "version": "1.0.0",
+  "description": "Huddle landing page with alternating feature blocks",
+  "main": "index.js",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --no-source-maps",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osoriodev/huddle-blocks.git"
+  },
+  "keywords": ["html", "sass", "parcel"],
+  "author": "David Osorio <osoriodev@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/osoriodev/huddle-blocks/issues"
+  },
+  "homepage": "https://github.com/osoriodev/huddle-blocks#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  }
+}
