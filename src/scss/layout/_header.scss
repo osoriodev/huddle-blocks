@@ -1,0 +1,41 @@
+@use '../utils' as *;
+
+.header {
+  width: 100%;
+  min-height: rem(64);
+  padding: 0 rem(20);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond-to('medium') {
+    min-height: rem(140);
+    padding: 0 rem(80);
+  }
+
+  &__logo {
+    width: fit-content;
+    display: block;
+  }
+
+  &__img {
+    width: rem(100);
+
+    @include respond-to('medium') {
+      width: rem(200);
+    }
+  }
+
+  &__cta {
+    padding: rem(6) rem(24);
+    font-size: rem(14);
+    font-weight: 700;
+    border-radius: rem(22);
+    background-color: var(--clr-ntrl);
+    color: var(--clr-secondary);
+
+    @include respond-to('medium') {
+      padding: rem(12) rem(64);
+    }
+  }
+}
