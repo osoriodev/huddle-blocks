@@ -1,0 +1,79 @@
+@use '../utils' as *;
+
+.hero {
+  width: 100%;
+  padding: rem(128) rem(34) rem(40);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(52);
+  text-align: center;
+  background-image: url('/src/assets/img/bg-hero-mobile.svg');
+  background-repeat: no-repeat;
+  background-color: var(--clr-secondary-lt);
+
+  @include respond-to('large') {
+    padding: rem(160) rem(80) rem(64);
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    text-align: left;
+    background-image: url('/src/assets/img/bg-hero-desktop.svg');
+  }
+
+  &__content {
+    width: 100%;
+    max-width: rem(524);
+
+    &--right {
+      @include respond-to('large') {
+        width: fit-content;
+        max-width: none;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(24);
+
+    @include respond-to('large') {
+      margin-top: rem(8);
+      margin-bottom: rem(28);
+      font-size: rem(40);
+    }
+  }
+
+  &__desc {
+    margin-bottom: rem(32);
+    color: var(--clr-secondary);
+
+    @include respond-to('large') {
+      font-size: rem(18);
+    }
+  }
+
+  &__cta {
+    display: inline-block;
+    padding: rem(10) rem(50);
+    border-radius: rem(28);
+    font-size: rem(14);
+    font-weight: 700;
+    color: var(--clr-ntrl);
+    background-color: var(--clr-primary);
+
+    @include respond-to('large') {
+      padding: rem(16) rem(70);
+    }
+  }
+
+  &__img {
+    @include respond-to('large') {
+      width: rem(600);
+      max-width: none;
+    }
+
+    @include respond-to('xlarge') {
+      width: rem(696);
+    }
+  }
+}
