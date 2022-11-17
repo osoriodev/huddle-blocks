@@ -1,0 +1,76 @@
+@use '../utils' as *;
+
+.card {
+  width: 100%;
+  min-height: rem(442);
+  padding: rem(56) rem(40);
+  display: flex;
+  flex-direction: column;
+  gap: rem(55);
+  border-radius: rem(16);
+  text-align: center;
+  box-shadow: 0 1px 4px rgba($color: #000, $alpha: 0.16);
+
+  @include respond-to('large') {
+    padding: rem(56) rem(33) rem(56) rem(120);
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+    align-items: center;
+    text-align: left;
+  }
+
+  &--reverse {
+    @include respond-to('large') {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__fig {
+    padding: 0 rem(8);
+
+    @include respond-to('large') {
+      padding: 0;
+    }
+
+    &--one {
+      @include respond-to('large') {
+        width: rem(404);
+      }
+    }
+    &--two {
+      @include respond-to('large') {
+        width: rem(418);
+      }
+    }
+    &--three {
+      @include respond-to('large') {
+        width: rem(418);
+      }
+    }
+  }
+
+  &__details {
+    @include respond-to('large') {
+      width: rem(492);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(14);
+    font-size: rem(20);
+
+    @include respond-to('large') {
+      font-size: rem(28);
+    }
+  }
+
+  &__desc {
+    font-size: rem(14);
+    color: var(--clr-base);
+
+    @include respond-to('large') {
+      font-size: rem(18);
+    }
+  }
+}
