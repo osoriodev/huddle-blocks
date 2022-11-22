@@ -49,20 +49,6 @@
     }
   }
 
-  &__cta {
-    display: inline-block;
-    padding: rem(10) rem(50);
-    border-radius: rem(28);
-    font-size: rem(14);
-    font-weight: 700;
-    color: var(--clr-ntrl);
-    background-color: var(--clr-primary);
-
-    @include respond-to('large') {
-      padding: rem(16) rem(70);
-    }
-  }
-
   &__fig {
     margin-top: rem(52);
 

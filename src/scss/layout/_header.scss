@@ -34,6 +34,12 @@
     border-radius: rem(22);
     background-color: var(--clr-ntrl);
     color: var(--clr-secondary);
+    box-shadow: 0 1px 4px rgba($color: #000, $alpha: 0.16);
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--clr-base);
+    }
 
     @include respond-to('medium') {
       padding: rem(12) rem(64);

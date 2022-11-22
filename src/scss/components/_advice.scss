@@ -1,0 +1,31 @@
+@use '../utils' as *;
+
+.advice {
+  width: 100%;
+  max-width: rem(480);
+  margin: 0 auto;
+  padding: rem(44) rem(16);
+  border-radius: rem(16);
+  text-align: center;
+  background-color: var(--clr-ntrl);
+  box-shadow: 0 1px 4px rgba($color: #000, $alpha: 0.16);
+
+  @include respond-to('xlarge') {
+    max-width: rem(800);
+    padding: rem(60) rem(16) rem(52);
+  }
+
+  &__title {
+    margin-bottom: rem(24);
+    font-size: rem(18);
+
+    @include respond-to('large') {
+      margin-bottom: rem(32);
+      font-size: rem(24);
+    }
+
+    @include respond-to('xlarge') {
+      font-size: rem(32);
+    }
+  }
+}

@@ -1,0 +1,30 @@
+@use '../utils' as *;
+
+.btn {
+  display: inline-block;
+  padding: rem(12) rem(52);
+  border-radius: rem(28);
+  font-size: rem(14);
+  font-weight: 700;
+  color: var(--clr-ntrl);
+  background-color: var(--clr-primary);
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: lighten($color: #ff52bf, $amount: 10%);
+  }
+
+  &--base {
+    @include respond-to('large') {
+      padding: rem(16) rem(68);
+    }
+  }
+
+  &--alt {
+    @include respond-to('xlarge') {
+      padding: rem(24) rem(100);
+      border-radius: rem(48);
+      font-size: rem(20);
+    }
+  }
+}

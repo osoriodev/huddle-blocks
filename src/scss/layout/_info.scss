@@ -2,10 +2,11 @@
 
 .info {
   width: 100%;
-  padding: rem(60) rem(20);
+  padding: rem(60) rem(20) rem(240);
+  position: relative;
 
   @include respond-to('large') {
-    padding: rem(160) rem(80);
+    padding: rem(160) rem(80) rem(340);
   }
 
   &__title {
@@ -23,5 +24,14 @@
     @include respond-to('large') {
       max-width: rem(1232);
     }
+  }
+
+  &__helper {
+    padding: 0 rem(18);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(34%);
   }
 }
